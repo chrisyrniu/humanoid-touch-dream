@@ -33,7 +33,7 @@
 
 ## Release Checklist
 
-- [ ] Lower-body controller training in Isaac Lab and deployment (<span style="color: green;">on-going</span>)
+- [ ] Lower-body controller training in Isaac Lab and deployment <img src="https://img.shields.io/badge/status-on--going-brightgreen" alt="on-going" height="20" align="absmiddle" />
 - [ ] Whole-body teleoperation and data collection
 - [ ] HTD policy training
 
