@@ -43,7 +43,7 @@
   <img src="imgs/tea_dream.gif" width="90%" />
   <br />
   <sub>Autonomous policy (HTD) with tactile latent dreaming</sub>
-  <br />
+  <br /><br />
   <img src="imgs/scoop_dream.gif" width="90%" />
   <br />
   <sub>Autonomous policy (HTD) with force dreaming</sub>
