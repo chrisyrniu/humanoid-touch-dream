@@ -4,7 +4,7 @@
 <p align="center">
   <a href="https://yaruniu.com/" target="_blank">Yaru Niu</a><sup>1</sup>&nbsp;&nbsp;&nbsp;
   Zhenlong Fang<sup>1</sup>&nbsp;&nbsp;&nbsp;
-  Binghong Chen<sup>1</sup>&nbsp;&nbsp;&nbsp;
+  <a href="https://wudicbh.github.io/" target="_blank">Binghong Chen</a><sup>1</sup>&nbsp;&nbsp;&nbsp;
   <a href="https://www.shuai-zhou.com/" target="_blank">Shuai Zhou</a><sup>1</sup>&nbsp;&nbsp;&nbsp;
   <a href="https://revanthsenthil.github.io/" target="_blank">Revanth Senthilkumaran</a><sup>1</sup>&nbsp;&nbsp;&nbsp;
   <br />
@@ -33,7 +33,7 @@
 
 ## Release Checklist
 
-- [ ] Lower-body controller training in Isaac Lab and deployment (on-going)
+- [ ] Lower-body controller training in Isaac Lab and deployment (<span style="color: green;">on-going</span>)
 - [ ] Whole-body teleoperation and data collection
 - [ ] HTD policy training
 
