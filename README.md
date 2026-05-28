@@ -29,7 +29,7 @@
 <p align="center">
   <img src="imgs/dream_touch_teaser.gif" width="90%" />
   <br />
-  Autonomous policy (HTD) for long-horzion loco-manipulation
+  <font color="#6a737d">Autonomous policy (HTD) for long-horzion loco-manipulation</font>
 </p>
 
 
@@ -42,9 +42,9 @@
 <p align="center">
   <img src="imgs/tea_dream.gif" width="90%" />
   <br />
-  Autonomous policy (HTD) with tactile latent dreaming
+  <font color="#6a737d">Autonomous policy (HTD) with tactile latent dreaming</font>
   <br />
   <img src="imgs/scoop_dream.gif" width="90%" />
   <br />
-  Autonomous policy (HTD) with force dreaming
+  <font color="#6a737d">Autonomous policy (HTD) with force dreaming</font>
 </p>
