@@ -26,6 +26,10 @@
     <a href="https://arxiv.org/pdf/2604.13015">Paper</a>
 </p>
 
+<p align="center">
+  <img src="imgs/dream_touch_teaser.gif" width="90%" />
+</p>
+
 
 ## Release Checklist
 
@@ -33,3 +37,8 @@
 - [ ] Whole-body teleoperation and data collection
 - [ ] HTD policy training
 
+<p align="center">
+  <img src="imgs/tea_dream.gif" width="90%" />
+  <br />
+  <img src="imgs/scoop_dream.gif" width="90%" />
+</p>
