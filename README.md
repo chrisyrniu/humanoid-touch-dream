@@ -26,4 +26,10 @@
     <a href="https://arxiv.org/pdf/2604.13015">Paper</a>
 </p>
 
-The code for whole-body controller, teleoperation, and HTD policy learning will be released by early May 2026. Thanks for your patience!
+
+## Release Checklist
+
+- [ ] Lower-body controller training in Isaac Lab and deployment (on-going)
+- [ ] Whole-body teleoperation and data collection
+- [ ] HTD policy training
+
