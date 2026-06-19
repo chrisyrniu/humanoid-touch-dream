@@ -22,6 +22,7 @@
 </p>
 
 <p align="center">
+    International Conference on Intelligent Robots and Systems (IROS) 2026<br />
     <a href="https://humanoid-touch-dream.github.io/">Website</a> |
     <a href="https://arxiv.org/pdf/2604.13015">Paper</a>
 </p>
@@ -35,8 +36,11 @@
 
 ## Release Checklist
 
-- [ ] Lower-body controller training in Isaac Lab and deployment <img src="https://img.shields.io/badge/status-on--going-brightgreen" alt="on-going" height="20" align="absmiddle" />
-- [ ] Whole-body teleoperation and data collection <img src="https://img.shields.io/badge/status-on--going-brightgreen" alt="on-going" height="20" align="absmiddle" />
+- [ ] Lower-body controller training in Isaac Lab and deployment <img src="https://img.shields.io/badge/status-on--going-yellow" alt="on-going" height="20" align="absmiddle" />
+  - [x] Teacher policy training and evaluation <img src="https://img.shields.io/badge/status-done-brightgreen" alt="done" height="20" align="absmiddle" />
+  - [x] Student policy training and evaluation <img src="https://img.shields.io/badge/status-done-brightgreen" alt="done" height="20" align="absmiddle" />
+  - [ ] Student policy deployment <img src="https://img.shields.io/badge/status-on--going-yellow" alt="on-going" height="20" align="absmiddle" />
+- [ ] Whole-body teleoperation and data collection <img src="https://img.shields.io/badge/status-on--going-yellow" alt="on-going" height="20" align="absmiddle" />
 - [ ] HTD policy training and deployment
 
 <p align="center">
@@ -48,3 +52,16 @@
   <br />
   <sub>Autonomous policy (HTD) with force dreaming</sub>
 </p>
+
+## Citation
+
+If you find this work useful, please consider citing our paper:
+
+```bibtex
+@inproceedings{niu2026humanoidtouchdream,
+  title={Learning Versatile Humanoid Manipulation with Touch Dreaming},
+  author={Niu, Yaru and Fang, Zhenlong and Chen, Binghong and Zhou, Shuai and Senthilkumaran, Revanth Krishna and Zhang, Hao and Chen, Bingqing and Qiu, Chen and Tseng, H. Eric and Francis, Jonathan and Zhao, Ding},
+  booktitle={IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+  year={2026}
+}
+```
