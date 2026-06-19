@@ -37,8 +37,8 @@
 ## Release Checklist
 
 - [ ] Lower-body controller training in Isaac Lab and deployment <img src="https://img.shields.io/badge/status-on--going-yellow" alt="on-going" height="20" align="absmiddle" />
-  - [x] Teacher policy training and evaluation <img src="https://img.shields.io/badge/status-done-brightgreen" alt="done" height="20" align="absmiddle" />
-  - [x] Student policy training and evaluation <img src="https://img.shields.io/badge/status-done-brightgreen" alt="done" height="20" align="absmiddle" />
+  - [x] Teacher policy training and evaluation <img src="https://img.shields.io/badge/status-ready-blue" alt="ready" height="20" align="absmiddle" />
+  - [x] Student policy training and evaluation <img src="https://img.shields.io/badge/status-ready-blue" alt="ready" height="20" align="absmiddle" />
   - [ ] Student policy deployment <img src="https://img.shields.io/badge/status-on--going-yellow" alt="on-going" height="20" align="absmiddle" />
 - [ ] Whole-body teleoperation and data collection <img src="https://img.shields.io/badge/status-on--going-yellow" alt="on-going" height="20" align="absmiddle" />
 - [ ] HTD policy training and deployment
