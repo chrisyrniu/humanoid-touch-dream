@@ -38,6 +38,9 @@
 The HTD whole-body controller tracks commanded linear and angular velocities together with torso height and orientation. The Isaac Lab training pipeline, teacher-to-student
 distillation, simulation evaluation, and Unitree G1 deployment code are available
 in [IsaacLab-Decoupled-WBC](https://github.com/chrisyrniu/IsaacLab-Decoupled-WBC).
+The full training pipeline can be run on a single GPU, and the release includes
+example teacher and student policy checkpoints. The [student policy](https://github.com/chrisyrniu/IsaacLab-Decoupled-WBC/tree/main/deploy/policy/g1_student) has also been
+validated on our physical Unitree G1 robot.
 
 <p align="center">
   <img src="imgs/htd_wbc_teaser.gif" width="90%" />
@@ -51,6 +54,7 @@ in [IsaacLab-Decoupled-WBC](https://github.com/chrisyrniu/IsaacLab-Decoupled-WBC
   - [x] Teacher policy training and evaluation <img src="https://img.shields.io/badge/status-released-brightgreen" alt="released" height="20" align="absmiddle" />
   - [x] Student policy training and evaluation <img src="https://img.shields.io/badge/status-released-brightgreen" alt="released" height="20" align="absmiddle" />
   - [x] Student policy deployment <img src="https://img.shields.io/badge/status-released-brightgreen" alt="released" height="20" align="absmiddle" />
+  - [x] Teacher and student policy example checkpoints <img src="https://img.shields.io/badge/status-released-brightgreen" alt="released" height="20" align="absmiddle" />
 - [ ] Whole-body teleoperation and data collection <img src="https://img.shields.io/badge/status-on--going-yellow" alt="on-going" height="20" align="absmiddle" />
 - [ ] HTD policy training and deployment
 
