@@ -33,13 +33,24 @@
   <sub>Autonomous policy (HTD) for long-horzion loco-manipulation</sub>
 </p>
 
+## Whole-Body Controller
+
+The HTD whole-body controller tracks commanded linear and angular velocities together with torso height and orientation. The Isaac Lab training pipeline, teacher-to-student
+distillation, simulation evaluation, and Unitree G1 deployment code are available
+in [IsaacLab-Decoupled-WBC](https://github.com/chrisyrniu/IsaacLab-Decoupled-WBC).
+
+<p align="center">
+  <img src="imgs/htd_wbc_teaser.gif" width="90%" />
+  <br />
+  <sub>HTD whole-body controller tracking locomotion and torso-pose commands</sub>
+</p>
 
 ## Release Checklist
 
-- [ ] Lower-body controller training in Isaac Lab and deployment <img src="https://img.shields.io/badge/status-on--going-yellow" alt="on-going" height="20" align="absmiddle" />
-  - [x] Teacher policy training and evaluation <img src="https://img.shields.io/badge/status-ready-blue" alt="ready" height="20" align="absmiddle" />
-  - [x] Student policy training and evaluation <img src="https://img.shields.io/badge/status-ready-blue" alt="ready" height="20" align="absmiddle" />
-  - [ ] Student policy deployment <img src="https://img.shields.io/badge/status-on--going-yellow" alt="on-going" height="20" align="absmiddle" />
+- [x] [Lower-body controller training in Isaac Lab and deployment](https://github.com/chrisyrniu/IsaacLab-Decoupled-WBC) <img src="https://img.shields.io/badge/status-released-brightgreen" alt="released" height="20" align="absmiddle" />
+  - [x] Teacher policy training and evaluation <img src="https://img.shields.io/badge/status-released-brightgreen" alt="released" height="20" align="absmiddle" />
+  - [x] Student policy training and evaluation <img src="https://img.shields.io/badge/status-released-brightgreen" alt="released" height="20" align="absmiddle" />
+  - [x] Student policy deployment <img src="https://img.shields.io/badge/status-released-brightgreen" alt="released" height="20" align="absmiddle" />
 - [ ] Whole-body teleoperation and data collection <img src="https://img.shields.io/badge/status-on--going-yellow" alt="on-going" height="20" align="absmiddle" />
 - [ ] HTD policy training and deployment
 
