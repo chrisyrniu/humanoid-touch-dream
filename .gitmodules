@@ -1,3 +1,3 @@
-[submodule "htd_wbc"]
-	path = htd_wbc
+[submodule "isaaclab_decoupled_wbc"]
+	path = htd_wbc/isaaclab_decoupled_wbc
 	url = https://github.com/chrisyrniu/IsaacLab-Decoupled-WBC.git
