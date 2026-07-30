@@ -42,6 +42,8 @@ The full training pipeline can be run on a single GPU, and the release includes
 example teacher and student policy checkpoints. The [student policy](https://github.com/chrisyrniu/IsaacLab-Decoupled-WBC/tree/main/deploy/policy/g1_student) has also been
 validated on our physical Unitree G1 robot.
 
+The controller is included at [`htd_wbc/isaaclab_decoupled_wbc`](htd_wbc/isaaclab_decoupled_wbc) as a Git submodule; initialize it after cloning with `git submodule update --init --recursive`.
+
 <p align="center">
   <img src="imgs/htd_wbc_teaser.gif" width="90%" />
   <br />
