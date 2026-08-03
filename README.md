@@ -59,7 +59,7 @@ We also include it here as a Git submodule at `htd_wbc/isaaclab_decoupled_wbc`; 
   - [x] Teacher and student policy example checkpoints <img src="https://img.shields.io/badge/status-released-brightgreen" alt="released" height="20" align="absmiddle" />
 - [ ] Whole-body teleoperation and data collection <img src="https://img.shields.io/badge/status-on--going-yellow" alt="on-going" height="20" align="absmiddle" />
   - [ ] Teleoperation with Apple Vision Pro <img src="https://img.shields.io/badge/status-on--going-yellow" alt="on-going" height="20" align="absmiddle" />
-  - [ ] Simulation support and Pico teleoperation/data collection <img src="https://img.shields.io/badge/status-on--going-yellow" alt="on-going" height="20" align="absmiddle" />
+  - [ ] Simulation support and teleoperation with PICO <img src="https://img.shields.io/badge/status-on--going-yellow" alt="on-going" height="20" align="absmiddle" />
 - [ ] HTD policy training and deployment <img src="https://img.shields.io/badge/status-on--going-yellow" alt="on-going" height="20" align="absmiddle" />
 
 <p align="center">
