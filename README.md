@@ -24,7 +24,8 @@
 <p align="center">
     International Conference on Intelligent Robots and Systems (IROS) 2026<br />
     <a href="https://humanoid-touch-dream.github.io/">Website</a> |
-    <a href="https://arxiv.org/pdf/2604.13015">Paper</a>
+    <a href="https://arxiv.org/pdf/2604.13015">Paper</a> |
+    <a href="https://humanoid-touch-dream.github.io/wbc_mujoco/dist/index.html">Interactive WBC Demo</a>
 </p>
 
 <p align="center">
@@ -43,6 +44,12 @@ example teacher and student policy checkpoints. The [student policy](https://git
 validated on our physical Unitree G1 robot.
 
 We also include it here as a Git submodule at `htd_wbc/isaaclab_decoupled_wbc`; initialize it after cloning with `git submodule update --init --recursive`.
+
+<p align="center">
+  <a href="https://humanoid-touch-dream.github.io/wbc_mujoco/dist/index.html">
+    <img src="https://img.shields.io/badge/Play_the_HTD_Controller-In_Your_Browser-76B900?style=for-the-badge&amp;logo=webgl&amp;logoColor=white" alt="Play the HTD controller in your browser">
+  </a>
+</p>
 
 <p align="center">
   <img src="imgs/htd_wbc_teaser.gif" width="90%" />
