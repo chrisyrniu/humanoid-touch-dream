@@ -1,0 +1,404 @@
+normalize_state: True
+human:
+  tokenizer:
+    hidden_dim: 512 # TODO: this needs to be the same as modality.output_dim.
+    nhead: 8
+    dim_head: 64
+    dropout: 0.1
+    main_image:
+      output_dim: 512 # this needs to be the same as tokenizer.hidden_dim
+      weights: DEFAULT
+      resnet_model: resnet18
+      split_dual: True
+      token_num: 16
+    body_pose_proprio:
+      input_dim: 6
+      output_dim: 512
+      widths: [512, 512]
+      tanh_end: False
+      ln: True
+      token_num: 2
+    eef_pose_proprio:
+      input_dim: 12
+      output_dim: 512
+      widths: [512, 512]
+      tanh_end: False
+      ln: True
+      token_num: 4
+    eef_to_body_pose_proprio:
+      input_dim: 12
+      output_dim: 512 
+      widths: [512, 512]
+      tanh_end: False
+      ln: True
+      token_num: 2
+    eef_state_proprio:
+      input_dim: 12
+      output_dim: 512
+      widths: [512, 512]
+      tanh_end: False
+      ln: True
+      token_num: 6
+  action_head:
+    eef_pose:
+      type: transformer
+      input_dim: 512
+      output_dim: 12
+      crossattn_modality_dropout: 0.1
+      crossattn_heads: 8
+      crossattn_dim_head: 32
+      action_horizon: 60
+      loss_weight: 1.0
+    body_pose:
+      type: transformer
+      input_dim: 512
+      output_dim: 6
+      crossattn_modality_dropout: 0.1
+      crossattn_heads: 8
+      crossattn_dim_head: 32
+      action_horizon: 60
+      loss_weight: 1.0
+    eef_joints:
+      type: transformer
+      input_dim: 512
+      output_dim: 12
+      crossattn_modality_dropout: 0.1
+      crossattn_heads: 8
+      crossattn_dim_head: 32
+      action_horizon: 60
+      loss_weight: 1.0
+
+g1_inspire_wb:
+  tokenizer:
+    hidden_dim: 512 # TODO: this needs to be the same as modality.output_dim.
+    nhead: 8
+    dim_head: 64
+    dropout: 0.1
+    main_image:
+      output_dim: 512 # this needs to be the same as tokenizer.hidden_dim
+      weights: DEFAULT
+      resnet_model: resnet18
+      split_dual: True
+      token_num: 160
+    left_wrist_image:
+      output_dim: 512 # this needs to be the same as tokenizer.hidden_dim
+      weights: DEFAULT
+      resnet_model: resnet18
+      token_num: 64
+    right_wrist_image:
+      output_dim: 512 # this needs to be the same as tokenizer.hidden_dim
+      weights: DEFAULT
+      resnet_model: resnet18
+      token_num: 64
+    body_pose_proprio:
+      input_dim: 6
+      output_dim: 512
+      widths: [512, 512]
+      tanh_end: False
+      ln: True
+      token_num: 4
+    eef_pose_proprio:
+      input_dim: 12
+      output_dim: 512
+      widths: [512, 512]
+      tanh_end: False
+      ln: True
+      token_num: 4
+    left_eef_to_body_pose_proprio:
+      input_dim: 6
+      output_dim: 512
+      widths: [512, 512]
+      tanh_end: False
+      ln: True
+      token_num: 4
+    right_eef_to_body_pose_proprio:
+      input_dim: 6
+      output_dim: 512
+      widths: [512, 512]
+      tanh_end: False
+      ln: True
+      token_num: 4
+    left_eef_link_proprio:
+      input_dim: 15
+      output_dim: 512 
+      widths: [512, 512]
+      tanh_end: False
+      ln: True
+      token_num: 4
+    right_eef_link_proprio:
+      input_dim: 15
+      output_dim: 512
+      widths: [512, 512]
+      tanh_end: False
+      ln: True
+      token_num: 4
+    robot_joint_pos_proprio:
+      input_dim: 29
+      output_dim: 512
+      widths: [512, 512]
+      tanh_end: False
+      ln: True
+      token_num: 1
+    left_eef_joint_pos_proprio:
+      input_dim: 6
+      output_dim: 512
+      widths: [512, 512]
+      tanh_end: False
+      ln: True
+      token_num: 1
+    right_eef_joint_pos_proprio:
+      input_dim: 6
+      output_dim: 512
+      widths: [512, 512]
+      tanh_end: False
+      ln: True
+      token_num: 1
+    ### touch modalities
+    # finger force
+    left_eef_finger_force_proprio:
+      input_dim: 6
+      output_dim: 512
+      widths: [512, 512]
+      tanh_end: False
+      ln: True
+      token_num: 4
+    right_eef_finger_force_proprio:
+      input_dim: 6
+      output_dim: 512
+      widths: [512, 512]
+      tanh_end: False
+      ln: True
+      token_num: 4
+    # tactile
+    left_pinky_tactile_cap:
+      input_dim: 5
+      output_dim: 512
+      token_num: 1
+    right_pinky_tactile_cap:
+      input_dim: 5
+      output_dim: 512
+      token_num: 1
+    left_ring_tactile_cap:
+      input_dim: 5
+      output_dim: 512
+      token_num: 1
+    right_ring_tactile_cap:
+      input_dim: 5
+      output_dim: 512
+      token_num: 1
+    left_middle_tactile_cap:
+      input_dim: 5
+      output_dim: 512
+      token_num: 1
+    right_middle_tactile_cap:
+      input_dim: 5
+      output_dim: 512
+      token_num: 1
+    left_index_tactile_cap:
+      input_dim: 5
+      output_dim: 512
+      token_num: 1
+    right_index_tactile_cap:
+      input_dim: 5
+      output_dim: 512
+      token_num: 1
+    left_thumb_tactile_cap:
+      input_dim: 5
+      output_dim: 512
+      token_num: 1
+    right_thumb_tactile_cap:
+      input_dim: 5
+      output_dim: 512
+      token_num: 1
+    left_palm_tactile_cap:
+      input_dim: 12
+      output_dim: 512
+      token_num: 1
+    right_palm_tactile_cap:
+      input_dim: 12
+      output_dim: 512
+      token_num: 1
+  action_head:
+    body_pose:
+      type: transformer
+      input_dim: 512
+      output_dim: 6
+      crossattn_modality_dropout: 0.1
+      crossattn_heads: 8
+      crossattn_dim_head: 32
+      action_horizon: 60
+      loss_weight: 1.0
+    left_eef_to_body_pose:
+      type: transformer
+      input_dim: 512
+      output_dim: 6
+      crossattn_modality_dropout: 0.1
+      crossattn_heads: 8
+      crossattn_dim_head: 32
+      action_horizon: 60
+      loss_weight: 1.0
+    right_eef_to_body_pose:
+      type: transformer
+      input_dim: 512
+      output_dim: 6
+      crossattn_modality_dropout: 0.1
+      crossattn_heads: 8
+      crossattn_dim_head: 32
+      action_horizon: 60
+      loss_weight: 1.0
+    left_eef_link_pose:
+      type: transformer
+      input_dim: 512
+      output_dim: 15
+      crossattn_modality_dropout: 0.1
+      crossattn_heads: 8
+      crossattn_dim_head: 32
+      action_horizon: 60
+      loss_weight: 0.4
+    right_eef_link_pose:
+      type: transformer
+      input_dim: 512
+      output_dim: 15
+      crossattn_modality_dropout: 0.1
+      crossattn_heads: 8
+      crossattn_dim_head: 32
+      action_horizon: 60
+      loss_weight: 0.4
+    velocity_commands:
+      type: transformer
+      input_dim: 512
+      output_dim: 3
+      crossattn_modality_dropout: 0.1
+      crossattn_heads: 8
+      crossattn_dim_head: 32
+      action_horizon: 60
+      loss_weight: 3.0
+      nonzero_chunk_weight: 2.0
+      nonzero_chunk_threshold: 0.10
+  dream_head:
+    left_eef_finger_force:
+      type: transformer
+      input_dim: 512
+      output_dim: 6
+      crossattn_modality_dropout: 0.1
+      crossattn_heads: 8
+      crossattn_dim_head: 32
+      action_horizon: 60
+      loss_weight: 0.2
+    right_eef_finger_force:
+      type: transformer
+      input_dim: 512
+      output_dim: 6
+      crossattn_modality_dropout: 0.1
+      crossattn_heads: 8
+      crossattn_dim_head: 32
+      action_horizon: 60
+      loss_weight: 0.2
+    left_pinky_tactile_cap:
+      type: transformer
+      input_dim: 512
+      output_dim: 5
+      crossattn_modality_dropout: 0.1
+      crossattn_heads: 8
+      crossattn_dim_head: 32
+      action_horizon: 60
+      loss_weight: 0.1
+    right_pinky_tactile_cap:
+      type: transformer
+      input_dim: 512
+      output_dim: 5
+      crossattn_modality_dropout: 0.1
+      crossattn_heads: 8
+      crossattn_dim_head: 32
+      action_horizon: 60
+      loss_weight: 0.1
+    left_ring_tactile_cap:
+      type: transformer
+      input_dim: 512
+      output_dim: 5
+      crossattn_modality_dropout: 0.1
+      crossattn_heads: 8
+      crossattn_dim_head: 32
+      action_horizon: 60
+      loss_weight: 0.1
+    right_ring_tactile_cap:
+      type: transformer
+      input_dim: 512
+      output_dim: 5
+      crossattn_modality_dropout: 0.1
+      crossattn_heads: 8
+      crossattn_dim_head: 32
+      action_horizon: 60
+      loss_weight: 0.1
+    left_middle_tactile_cap:
+      type: transformer
+      input_dim: 512
+      output_dim: 5
+      crossattn_modality_dropout: 0.1
+      crossattn_heads: 8
+      crossattn_dim_head: 32
+      action_horizon: 60
+      loss_weight: 0.1
+    right_middle_tactile_cap:
+      type: transformer
+      input_dim: 512
+      output_dim: 5
+      crossattn_modality_dropout: 0.1
+      crossattn_heads: 8
+      crossattn_dim_head: 32
+      action_horizon: 60
+      loss_weight: 0.1
+    left_index_tactile_cap:
+      type: transformer
+      input_dim: 512
+      output_dim: 5
+      crossattn_modality_dropout: 0.1
+      crossattn_heads: 8
+      crossattn_dim_head: 32
+      action_horizon: 60
+      loss_weight: 0.1
+    right_index_tactile_cap:
+      type: transformer
+      input_dim: 512
+      output_dim: 5
+      crossattn_modality_dropout: 0.1
+      crossattn_heads: 8
+      crossattn_dim_head: 32
+      action_horizon: 60
+      loss_weight: 0.1
+    left_thumb_tactile_cap:
+      type: transformer
+      input_dim: 512
+      output_dim: 5
+      crossattn_modality_dropout: 0.1
+      crossattn_heads: 8
+      crossattn_dim_head: 32
+      action_horizon: 60
+      loss_weight: 0.1
+    right_thumb_tactile_cap:
+      type: transformer
+      input_dim: 512
+      output_dim: 5
+      crossattn_modality_dropout: 0.1
+      crossattn_heads: 8
+      crossattn_dim_head: 32
+      action_horizon: 60
+      loss_weight: 0.1
+    left_palm_tactile_cap:
+      type: transformer
+      input_dim: 512
+      output_dim: 12
+      crossattn_modality_dropout: 0.1
+      crossattn_heads: 8
+      crossattn_dim_head: 32
+      action_horizon: 60
+      loss_weight: 0.1
+    right_palm_tactile_cap:
+      type: transformer
+      input_dim: 512
+      output_dim: 12
+      crossattn_modality_dropout: 0.1
+      crossattn_heads: 8
+      crossattn_dim_head: 32
+      action_horizon: 60
+      loss_weight: 0.1

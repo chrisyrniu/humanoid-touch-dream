@@ -1,0 +1,37 @@
+camera_names:
+  - main_left
+  - main_right
+  - wrist_left
+  - wrist_right
+
+backbone_map: [0, 0, 1, 2]
+
+observation_name:
+  - proprioceptions/body_proprio
+  - proprioceptions/eef_proprio
+  - proprioceptions/left_eef_to_body_proprio
+  - proprioceptions/right_eef_to_body_proprio
+  - proprioceptions/left_eef_link_proprio
+  - proprioceptions/right_eef_link_proprio
+  - proprioceptions/robot_joint_pos_proprio
+  - proprioceptions/left_eef_joint_pos_proprio
+  - proprioceptions/right_eef_joint_pos_proprio
+  - proprioceptions/left_eef_finger_force_proprio
+  - proprioceptions/right_eef_finger_force_proprio
+  - proprioceptions/other/left_touch
+  - proprioceptions/other/right_touch
+
+# tactile encoded with HandPatchTactileEncoder (CNN per patch)
+# the last num_hands * tactile_dim dims of qpos are treated as tactile
+tactile_config:
+  tactile_dim: 1062
+  num_hands: 2
+  encoder_output_dim: 512
+
+action_name:
+  - actions/body
+  - actions/left_eef_to_body
+  - actions/right_eef_to_body
+  - actions/left_eef_link
+  - actions/right_eef_link
+  - actions/velocity_commands

@@ -1,0 +1,5 @@
+-r ../htd_policy/requirements.txt
+
+cyclonedds==0.10.2
+pynput
+pyserial

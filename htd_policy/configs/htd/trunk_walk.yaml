@@ -1,0 +1,16 @@
+output_len:
+  body_pose: 24
+  left_eef_to_body_pose: 24
+  right_eef_to_body_pose: 24
+  left_eef_link_pose: 30
+  right_eef_link_pose: 30
+  velocity_commands: 15
+trunk_mode: encoder_decoder
+hidden_dim: 512
+dropout: 0.1
+nheads: 8
+dim_feedforward: 1024
+enc_layers: 4
+dec_layers: 4
+pre_norm: False
+token_postprocessing: none

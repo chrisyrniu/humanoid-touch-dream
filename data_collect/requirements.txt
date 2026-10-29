@@ -1,0 +1,12 @@
+numpy
+avp_stream
+h5py
+pyrealsense2
+pillow==11.3.0
+opencv-python==4.12.0.88
+vuer==0.0.31rc7
+params-proto<3
+aiohttp==3.9.5
+aiohttp_cors==0.7.0
+cyclonedds==0.10.2
+av==16.0.1

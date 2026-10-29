@@ -1,0 +1,59 @@
+# Python environments, caches, and builds
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+build/
+dist/
+
+# Local configuration and certificates
+.env
+.env.*
+!.env.example
+!.env.*.example
+*.pem
+
+# Editor and OS files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Locally cloned hardware SDKs
+unitree_sdk2_python/
+inspire_hands_unitree_sdk/
+
+# Collected datasets and videos
+demonstrations/
+*.hdf5
+*.h5
+*.mp4
+
+# Training logs and generated run directories
+*.log
+logs/
+wandb/
+runs/
+ckpt/
+ckpt_*/
+# Training entry points append the task and method to the output prefix.
+*_HTD/
+*_MXT/
+*_ACT/
+*_HIT/
+dream_touch_results/
+
+# Training checkpoints and model exports
+*.ckpt
+*.pt
+*.pth
+*.onnx
+
+# Bundled WBC checkpoint
+!/robot_control/g1_wbc_policy/student_policy_jit.pt

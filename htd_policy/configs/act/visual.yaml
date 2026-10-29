@@ -1,0 +1,28 @@
+camera_names:
+  - main_left
+  - main_right
+  - wrist_left
+  - wrist_right
+
+# maps each camera to a backbone index
+# main_left and main_right share backbone 0; each wrist has its own
+backbone_map: [0, 0, 1, 2]
+
+observation_name:
+  - proprioceptions/body_proprio
+  - proprioceptions/eef_proprio
+  - proprioceptions/left_eef_to_body_proprio
+  - proprioceptions/right_eef_to_body_proprio
+  - proprioceptions/left_eef_link_proprio
+  - proprioceptions/right_eef_link_proprio
+  - proprioceptions/robot_joint_pos_proprio
+  - proprioceptions/left_eef_joint_pos_proprio
+  - proprioceptions/right_eef_joint_pos_proprio
+
+action_name:
+  - actions/body
+  - actions/left_eef_to_body
+  - actions/right_eef_to_body
+  - actions/left_eef_link
+  - actions/right_eef_link
+  - actions/velocity_commands

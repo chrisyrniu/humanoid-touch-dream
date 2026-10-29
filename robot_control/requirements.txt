@@ -1,0 +1,3 @@
+logging-mp==0.1.6
+meshcat==0.3.2
+numpy==1.26.4
