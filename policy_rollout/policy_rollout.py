@@ -1001,8 +1001,13 @@ class HTDPolicyRollout:
     def _record_dream_gt(self, step_idx):
         """Record current GT tactile, force, and head cam into the accumulation buffer."""
         if self.inspire_hand_type == 'f1':
-            self._dream_accum['gt_left_tactile'][step_idx] = self.left_tactile_cap.copy()
-            self._dream_accum['gt_right_tactile'][step_idx] = self.right_tactile_cap.copy()
+            with self.touch_state_lock:
+                left_raw = self.left_touch_raw.copy()
+                right_raw = self.right_touch_raw.copy()
+            self._dream_accum['gt_left_tactile'][step_idx] = _normalize_f1_touch(
+                _process_f1_touch_raw(left_raw))
+            self._dream_accum['gt_right_tactile'][step_idx] = _normalize_f1_touch(
+                _process_f1_touch_raw(right_raw))
         else:
             with self.touch_state_lock:
                 lt = self.left_touch_raw.astype(np.float32) / 4095.0
